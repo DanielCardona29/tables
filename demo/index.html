@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>training-panel-accounts-ui demo</title>
+  <script src="../build/webcomponents-loader.js"></script>
+  <script src="../build/scoping-ambients-shim.min.js"></script>
+  <script src="../build/custom-style-interface.min.js"></script>
+  <script>
+    {
+      const _customElementsDefine = window.customElements.define;
+      window.customElements.define = (name, cl, conf) => {
+        if (customElements.get(name)) {
+          console.warn(`${name} has been defined twice`);
+        } else {
+          _customElementsDefine.call(window.customElements, name, cl, conf);
+        }
+      };
+    }
+  </script>
+  <script defer src="../build/component.js"></script>
+  <script type="module" crossorigin="use-credentials">
+    import '../build/demo-build.js';
+  </script>
+</head>
+
+<body>
+  <bbva-core-demo-helper events='["login-tsec-success"]'>
+    <bbva-core-demo-case heading="Basic" description="Default specs">
+      <template>
+
+        <bbva-button-default>Generate Tsec</bbva-button-default>
+        <cells-traing-tsec-dm></cells-traing-tsec-dm>
+
+        <training-panel-accounts-ui></training-panel-accounts-ui>
+
+        <script>
+
+          const tsec = document.querySelector('cells-traing-tsec-dm');
+          const button = document.querySelector('bbva-button-default');
+
+          tsec.host = 'https://artichoke.platform.bbva.com';
+          tsec.country = 'co';
+          tsec.user = '1234567890';
+          tsec.password = '112233';
+          tsec.consumerId = '10000003';
+
+          button.addEventListener('click', () => {
+            tsec.Login()
+          })
+
+          const data = [
+            {
+              "title": "YOUNG_ACCOUNT",
+              "status": "ACTIVATED",
+              "number": "ES9001821642030201537555",
+              "alias": "Cuenta Corriente",
+              "availableBalance": {
+                "currentBalances": [
+                  {
+                    "amount": 0,
+                    "currency": "EUR"
+                  }
+                ],
+                "postedBalances": [
+                  {
+                    "amount": 0,
+                    "currency": "EUR"
+                  }
+                ],
+                "pendingBalances": [
+                  {
+                    "amount": 0,
+                    "currency": "EUR"
+                  }
+                ]
+              },
+              "accountType": "COMMON_ACCOUNT",
+              "accountId": "1001",
+              "accountFamily": "SAVINGS"
+            },
+            {
+              "title": "CORRIENTE_MX",
+              "status": "ACTIVATED",
+              "number": "863454545451687222",
+              "alias": "Cuenta corriente",
+              "availableBalance": {
+                "currentBalances": [
+                  {
+                    "amount": 42104.48,
+                    "currency": "MXN"
+                  }
+                ],
+                "postedBalances": [
+                  {
+                    "amount": 42104.48,
+                    "currency": "MXN"
+                  }
+                ],
+                "pendingBalances": [
+                  {
+                    "amount": 0,
+                    "currency": "MXN"
+                  }
+                ]
+              },
+              "accountType": "CHECK_ACCOUNT",
+              "accountId": "1002",
+              "accountFamily": "COMMON"
+            },
+            {
+              "title": "CORRIENTE_MX",
+              "status": "ACTIVATED",
+              "number": "982376345443472184",
+              "alias": "Cuenta corriente",
+              "availableBalance": {
+                "currentBalances": [
+                  {
+                    "amount": 200.48,
+                    "currency": "MXN"
+                  }
+                ],
+                "postedBalances": [
+                  {
+                    "amount": 200.48,
+                    "currency": "MXN"
+                  }
+                ],
+                "pendingBalances": [
+                  {
+                    "amount": 0,
+                    "currency": "MXN"
+                  }
+                ]
+              },
+              "accountType": "LIBRETON_ACCOUNT",
+              "accountId": "1001",
+              "accountFamily": "COMMON"
+            },
+            {
+              "title": "CORRIENTE_MX",
+              "status": "ACTIVATED",
+              "number": "982376345443472184",
+              "alias": "Cuenta corriente",
+              "availableBalance": {
+                "currentBalances": [
+                  {
+                    "amount": 10255.23,
+                    "currency": "MXN"
+                  }
+                ],
+                "postedBalances": [
+                  {
+                    "amount": 200.48,
+                    "currency": "MXN"
+                  }
+                ],
+                "pendingBalances": [
+                  {
+                    "amount": 0,
+                    "currency": "MXN"
+                  }
+                ]
+              },
+              "accountType": "LIBRETON_ACCOUNT",
+              "accountId": "1009",
+              "accountFamily": "COMMON"
+            },
+            {
+              "title": "CORRIENTE_MX",
+              "status": "ACTIVATED",
+              "number": "982376345443472184",
+              "alias": "Cuenta corriente",
+              "availableBalance": {
+                "currentBalances": [
+                  {
+                    "amount": 0,
+                    "currency": "MXN"
+                  }
+                ],
+                "postedBalances": [
+                  {
+                    "amount": 200.48,
+                    "currency": "MXN"
+                  }
+                ],
+                "pendingBalances": [
+                  {
+                    "amount": 0,
+                    "currency": "MXN"
+                  }
+                ]
+              },
+              "accountType": "LIBRETON_ACCOUNT",
+              "accountId": "1010",
+              "accountFamily": "COMMON"
+            },
+            {
+              "title": "CORRIENTE_MX",
+              "status": "ACTIVATED",
+              "number": "982376345443472184",
+              "alias": "Cuenta corriente",
+              "availableBalance": {
+                "currentBalances": [
+                  {
+                    "amount": 506121.23,
+                    "currency": "MXN"
+                  }
+                ],
+                "postedBalances": [
+                  {
+                    "amount": 200.48,
+                    "currency": "MXN"
+                  }
+                ],
+                "pendingBalances": [
+                  {
+                    "amount": 0,
+                    "currency": "MXN"
+                  }
+                ]
+              },
+              "accountType": "LIBRETON_ACCOUNT",
+              "accountId": "1011",
+              "accountFamily": "COMMON"
+            },
+            {
+              "title": "DIVISA_MX",
+              "status": "ACTIVATED",
+              "number": "923736365411180073",
+              "alias": "Cuenta en divisa",
+              "availableBalance": {
+                "currentBalances": [
+                  {
+                    "amount": 150000,
+                    "currency": "USD"
+                  },
+                  {
+                    "amount": 2830217,
+                    "currency": "MXN"
+                  }
+                ],
+                "postedBalances": [
+                  {
+                    "amount": 200000,
+                    "currency": "USD"
+                  },
+                  {
+                    "amount": 3773622,
+                    "currency": "MXN"
+                  }
+                ],
+                "pendingBalances": [
+                  {
+                    "amount": 50000,
+                    "currency": "MXN"
+                  },
+                  {
+                    "amount": 943405,
+                    "currency": "MXN"
+                  }
+                ]
+              },
+              "accountType": "CHECK_ACCOUNT",
+              "accountId": "1003",
+              "accountFamily": "COMMON"
+            }
+          ]
+
+
+          const tabla = document.querySelector('training-panel-accounts-ui');
+
+          tabla.data = data;
+        </script>
+      </template>
+    </bbva-core-demo-case>
+  </bbva-core-demo-helper>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "@training/training-panel-accounts-ui",
+  "version": "1.0.0-rc.1",
+  "description": "",
+  "keywords": [],
+  "main": "index.js",
+  "files": [
+    "/src/",
+    "/locales/",
+    "*.js",
+    "!**/*.scss"
+  ],
+  "dependencies": {
+    "@bbva-web-components/bbva-core-collapse": "^1.1.9",
+    "@bbva-web-components/bbva-core-lit-helpers": "^1.0.4",
+    "@bbva-web-components/bbva-foundations-styles": "^2.3.5",
+    "@bbva-web-components/bbva-web-table": "^1.1.4",
+    "@bbva-web-components/bbva-web-table-body": "^1.5.4",
+    "@bbva-web-components/bbva-web-table-header": "^1.1.8",
+    "@bbva-web-components/bbva-web-table-panel-info": "^1.1.10",
+    "@bbva-web-components/bbva-web-table-row-group": "^1.1.7",
+    "@training/training-account-dm": "git+https://github.com/DanielCardona29/training-account-dm.git#master",
+    "lit-element": "^2.0.0"
+  },
+  "devDependencies": {
+    "@bbva-web-components/bbva-button-default": "^5.15.10",
+    "@bbva-web-components/cells-traing-tsec-dm": "git+https://github.com/DanielCardona29/cells-traing-tsec-dm.git",
+    "@cells/cells-component-core": "^3.1.0"
+  }
+}
