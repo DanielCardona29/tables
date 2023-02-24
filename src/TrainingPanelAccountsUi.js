@@ -4,8 +4,8 @@ import styles from './TrainingPanelAccountsUi-styles.js';
 
 
 import '@bbva-web-components/bbva-web-table/index';
-import './components/accounts/accounst-table.js';
-import './components/transactions/transactions-table.js';
+import './Component/accounts/accounst-table.js';
+import './Component/transactions/transactions-table.js';
 
 export class TrainingPanelAccountsUi extends LitElement {
   static get is() {
