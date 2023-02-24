@@ -177,10 +177,6 @@ class ExampleTableCollapsibleRows extends BbvaWebTable {
 
   /* eslint-disable class-methods-use-this */
   _detailContent(item) {
-
-    console.log(item.movementsList);
-
-
     return item.movementsList ? html`
       <transactions-table .data=${item.movementsList}></transactions-table>
     ` : html`
